@@ -22,3 +22,9 @@ PinciPurpleTheme >> progressBarProgressFillColor [
 
 	^ self settings selectionColor
 ]
+
+{ #category : 'accessing' }
+PinciPurpleTheme >> shStyleTableName [
+	
+	^ #pinciPurpleStyleTable
+]
