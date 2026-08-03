@@ -36,20 +36,24 @@ SHRBTextStyler class >> pinciPurpleStyleTable [
             (#thisProcess                           '00CC6E')
             (#return                                 '00CC6E' bold)
 
-            (patternArg                             'CBA6F7' bold)
-            (blockPatternArg                        'CBA6F7' bold)
-            (blockArg                               'CBA6F7' bold)
-            (argument                               'CBA6F7')
+				"--- Method & Block Arguments (Vivid Pink) ---"
+            (patternArg                             'F5C2E7' bold)
+            (blockPatternArg                        'F5C2E7' bold)
+            (blockArg                               'F5C2E7')
+            (argument                               'F5C2E7')
             
+            "--- Local / Temporary Variables (Light Mauve Purple) ---"
             (blockTempVar                           'CBA6F7')
             (blockPatternTempVar                    'CBA6F7')
-            (instVar                                'CBA6F7')
             (tempVar                                'CBA6F7')
             (patternTempVar                         'CBA6F7')
 
+            "--- Instance Variables (Bright Peach / Light Orange) ---"
+            (instVar                                'FAB387')
+
             (poolConstant                           'CBA6F7' bold)
             (classVar                               'CBA6F7' bold)
-            (globalVar                               white bold)
+            (globalVar                              white bold)
 
             (incompleteIdentifier                   'E8E2B7' italic)
             (incompleteSelector                     'E8E2B7' italic)
@@ -57,7 +61,6 @@ SHRBTextStyler class >> pinciPurpleStyleTable [
             (undefinedIdentifier                     'FF8A80')
             (undefinedSelector                       'FF8A80')
 
-            "Method name is now white and bold"
             (patternSelector                         white bold)
             
             (blockArgColon                           white)

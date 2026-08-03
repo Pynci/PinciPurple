@@ -62,7 +62,7 @@ PinciPurpleThemeConfigurator >> caretColor [
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> classExtensionColor [
 
-	^ Color fromHexString: 'B4BEFE'
+	^ Color fromHexString: 'CBA6F7'
 ]
 
 { #category : 'colors' }
@@ -92,7 +92,7 @@ PinciPurpleThemeConfigurator >> disabledColor [
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> disabledLabelColor [
 
-	^ Color fromHexString: '7F849C'
+	^ Color fromHexString: '6C7086'
 ]
 
 { #category : 'colors' }
@@ -133,8 +133,8 @@ PinciPurpleThemeConfigurator >> lightSelectionColor [
 
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> secondarySelectionColor [
-
-    ^ (Color fromHexString: '69569B') alpha: 0.30
+	
+	^ (Color fromHexString: '69569B') alpha: 0.45
 ]
 
 { #category : 'colors' }
