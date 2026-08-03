@@ -2,87 +2,101 @@ Extension { #name : 'SHRBTextStyler' }
 
 { #category : '*PinciPurple' }
 SHRBTextStyler class >> pinciPurpleStyleTable [
+	"color can be a valid argument to Color class>>colorFrom: , or nil to
+	use the editor text color.
+	Multiple emphases can be specified using an array e.g. #(bold italic).
+	If emphasis is not specified, #normal will be used.
+	if pixel height is not specified , then the editor font size will be used.
+
+	This style is a Pinci Purple variation of the classic Dark theme.
+	"
 	<styleTable: 'Pinci Purple'>
 
+			"(symbol color [emphasisSymbolOrArray [textStyleName [pixelHeight]]])"
 	^ #(
-		(default                                 white)
-		(invalid                                 'FF8A80')
+			(default								white)
+			(invalid								'FF8A80')
 
-		(comment                                 '7D8C93')
+			(comment								'7D8C93')
 
-		(character                               'F6B16B')
-		(number                                  'FFE54B')
-		(symbol                                  'E38C1E')
-		(string                                  'E38C1E')
+			(character							('E38C1E' lighter))
+			(number								('FFE54B'))
+			(symbol								('E38C1E'))
+			(string								('E38C1E'))
 
-		(selector                                white)
+			(selector								white)
 
-		(#true                                   '009952')
-		(#false                                  '009952')
-		(#nil                                    '009952')
+			(#true								('00CC6E' darker))
+			(#false								('00CC6E' darker))
+			(#nil									('00CC6E' darker))
 
-		(#self                                   '00CC6E')
-		(#super                                  '00CC6E')
-		(#thisContext                            '00CC6E')
-		(#thisProcess                            '00CC6E')
-		(#return                                 '00CC6E' bold)
+			(#self								'00CC6E')
+			(#super								'00CC6E')
+			(#thisContext							'00CC6E')
+			(#thisProcess							'00CC6E')
+			(#return								'00CC6E' bold)
 
-		(patternArg                              'F5C2E7' bold)
-		(argument                                'F5C2E7')
+				"--- Method-scope Arguments (Vivid Pink) ---"
+			(patternArg							'F5C2E7' bold)
+			(argument							'F5C2E7')
 
-		(instVar                                 'B56F18')
+				"--- Block-scope Arguments (Rose Pink, italic to mark block scope) ---"
+			(blockPatternArg						'F38BA8' italic)
+			(blockArg							'F38BA8' italic)
 
-		(patternTempVar                          'CBA6F7')
-		(tempVar                                 'CBA6F7')
+				"--- Method-scope Temp Vars (Light Mauve Purple) ---"
+			(patternTempVar						'CBA6F7')
+			(tempVar								'CBA6F7')
 
-		(blockPatternArg                         'F38BA8' (bold italic))
-		(blockArg                                'F38BA8' italic)
+				"--- Block-scope Temp Vars (Darker Mauve, italic to mark block scope) ---"
+			(blockPatternTempVar					'A77AE0' italic)
+			(blockTempVar							'A77AE0' italic)
 
-		(blockPatternTempVar                     'CBA6F7' (bold italic))
-		(blockTempVar                            'CBA6F7' italic)
+				"--- Instance Variables (Bright Peach / Light Orange) ---"
+			(instVar								'FFB454')
 
-		(poolConstant                            'CBA6F7' bold)
-		(classVar                                'CBA6F7' bold)
-		(globalVar                               white bold)
+			(poolConstant							'CBA6F7' bold)
+			(classVar							'CBA6F7' bold)
+			(globalVar							white bold)
 
-		(incompleteIdentifier                    'E8E2B7' italic)
-		(incompleteSelector                      'E8E2B7' italic)
+			(incompleteIdentifier					'E8E2B7' italic)
+			(incompleteSelector					'E8E2B7' italic)
 
-		(undefinedIdentifier                     'FF8A80')
-		(undefinedSelector                       'FF8A80')
+			(undefinedIdentifier					'FF8A80')
+			(undefinedSelector					'FF8A80')
 
-		(patternSelector                         white bold)
+			(patternSelector						nil bold)
 
-		(blockArgColon                           white)
-		(parenthesis                             white)
-		(parenthesis1                            'A6E3A1')
-		(parenthesis2                            'F5C2E7')
-		(parenthesis3                            'FF8A80')
-		(parenthesis4                            'A6E3A1')
-		(parenthesis5                            'FAB387')
-		(parenthesis6                            'F5C2E7')
-		(parenthesis7                            'CBA6F7')
-		(block                                   white)
-		(block1                                  'A6E3A1')
-		(block2                                  'F5C2E7')
-		(block3                                  'F38BA8')
-		(block4                                  'A6E3A1')
-		(block5                                  'FAB387')
-		(block6                                  'F5C2E7')
-		(block7                                  'CBA6F7')
-		(brace                                   white)
-		(brace1                                  'A6E3A1')
-		(brace2                                  'F5C2E7')
-		(brace3                                  'FF8A80')
-		(brace4                                  'A6E3A1')
-		(brace5                                  'FAB387')
-		(brace6                                  'F5C2E7')
-		(brace7                                  'CBA6F7')
-		(cascadeSeparator                        white bold)
-		(statementSeparator                      white bold)
-		(methodTempBar                           white)
-		(blockTempBar                            white)
-		(blockArgsBar                            white)
+			(blockArgColon						white)
+			(parenthesis							white)
+			(parenthesis1							(green muchLighter))
+			(parenthesis2							(magenta muchLighter))
+			(parenthesis3							('FF8A80' muchLighter))
+			(parenthesis4							(green lighter))
+			(parenthesis5							(orange lighter))
+			(parenthesis6							(magenta lighter))
+			(parenthesis7							purple)
+			(block								white)
+			(block1								(green muchLighter))
+			(block2								(magenta muchLighter))
+			(block3								(red muchLighter))
+			(block4								(green lighter))
+			(block5								(orange lighter))
+			(block6								(magenta lighter))
+			(block7								purple)
+			(brace								white)
+			(brace1								(green muchLighter))
+			(brace2								(magenta muchLighter))
+			(brace3								(red muchLighter))
+			(brace4								(green lighter))
+			(brace5								(orange lighter))
+			(brace6								(magenta lighter))
+			(brace7								purple)
+			(cascadeSeparator						white bold)
+			(statementSeparator					white bold)
+			(methodTempBar						white)
+			(blockTempBar							white)
+			(blockArgsBar							white)
 
-		(pragma                                  'B4DD6E'))
+			(pragma								'B4DD6E'))
 ]
