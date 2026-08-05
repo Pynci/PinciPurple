@@ -20,19 +20,18 @@ PinciPurpleThemeConfigurator >> badgeColor [
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> balloonBackgroundColor [
 
-	^ Color fromHexString: '313244'
+	^ Color fromHexString: '2D253B'
 ]
 
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> baseColor [
 
-	^ Color fromHexString: '313244'
+	^ Color fromHexString: '2D253B'
 ]
 
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> basePassiveBackgroundColor [
-
-	^ Color fromHexString: '3A3B4F'
+	^ Color fromHexString: '362C47'
 ]
 
 { #category : 'colors' }
@@ -44,7 +43,7 @@ PinciPurpleThemeConfigurator >> baseSelectionColor [
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> borderColor [
 
-	^ Color fromHexString: '585B70'
+	^ Color fromHexString: '624D85'
 ]
 
 { #category : 'colors' }
@@ -74,7 +73,7 @@ PinciPurpleThemeConfigurator >> dangerTextColor [
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> darkBaseColor [
 
-	^ Color fromHexString: '2A2B3C'
+	^ Color fromHexString: '231D30'
 ]
 
 { #category : 'colors' }
@@ -116,13 +115,13 @@ PinciPurpleThemeConfigurator >> growlFillColorFor: aGrowlMorph [
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> lightBackgroundColor [
 
-	^ Color fromHexString: '3A3B4F'
+	^ Color fromHexString: '362C47'
 ]
 
 { #category : 'colors' }
 PinciPurpleThemeConfigurator >> lightBaseColor [
 
-	^ Color fromHexString: '45475A'
+	^ Color fromHexString: '44375A'
 ]
 
 { #category : 'colors' }
