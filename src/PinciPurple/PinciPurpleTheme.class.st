@@ -11,6 +11,12 @@ PinciPurpleTheme class >> colorConfiguratorClass [
 	^ PinciPurpleThemeConfigurator
 ]
 
+{ #category : 'class initialization' }
+PinciPurpleTheme class >> initialize [
+
+	self updateWorldLogo
+]
+
 { #category : 'accessing' }
 PinciPurpleTheme class >> themeName [
 
@@ -19,18 +25,19 @@ PinciPurpleTheme class >> themeName [
 
 { #category : 'logo updating' }
 PinciPurpleTheme class >> updateWorldLogo [
-
-	| logoMorph targetColor tintedForm newInstance |
-	newInstance := self new.
-	logoMorph := World submorphs detect: [ :m | m isKindOf: ImageMorph ] ifNone: [ ^ newInstance ].
-	targetColor := newInstance class colorConfiguratorClass new caretColor. "or selectionColor"
-
-	tintedForm := logoMorph form collectColors: [ :c |
-			              c isTransparent
-				              ifTrue: [ c ]
-				              ifFalse: [ targetColor alpha: c alpha ] ].
-
-	logoMorph form: tintedForm
+	
+	<script>
+	World defer: [
+		World submorphs 
+			detect: [ :m | m isKindOf: ImageMorph ] 
+			ifFound: [ :logoMorph |
+				| targetColor tintedForm |
+				targetColor := self colorConfiguratorClass new caretColor.
+				tintedForm := logoMorph form collectColors: [ :color |
+					color isTransparent 
+						ifTrue: [ color ]
+						ifFalse: [ targetColor alpha: color alpha ] ].
+				logoMorph form: tintedForm ] ]
 ]
 
 { #category : 'fill-styles' }

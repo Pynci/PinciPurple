@@ -9,7 +9,7 @@ Class {
 BaselineOfPinciPurple >> applyTheme [
 
 	PinciPurpleTheme beCurrent.
-	PinciPurpleTheme updateWorldLogo
+	World defer: [ PinciPurpleTheme updateWorldLogo ]
 ]
 
 { #category : 'baselines' }
