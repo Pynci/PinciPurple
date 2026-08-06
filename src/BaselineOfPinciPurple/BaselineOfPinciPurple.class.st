@@ -8,7 +8,8 @@ Class {
 { #category : 'post load' }
 BaselineOfPinciPurple >> applyTheme [
 
-	PinciPurpleTheme beCurrent
+	PinciPurpleTheme beCurrent.
+	PinciPurpleTheme updateWorldLogo
 ]
 
 { #category : 'baselines' }
