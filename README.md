@@ -1,7 +1,7 @@
 # Pinci Purple
 
 A simple Pharo dark theme for purple enjoyers like me.
-Feel free to modify it as you like, also open a PR if you mind share some of your customizations.
+Feel free to modify it as you like, also open a PR if you mind sharing some of your customizations.
 
 To apply it, just execute this in the Playground:
 ```Smalltalk
